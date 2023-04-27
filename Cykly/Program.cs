@@ -32,6 +32,7 @@ namespace Cykly
             //for(počáteční hodnota, podmínka, příkaz)
             //i++ –> inkrementace, přičtení o jedna
             //i-- –> dekrementace, snížení o jedna
+            //Cyklus for má řídící proměnnou, kolikrát se má cyklus vykonat
             Console.WriteLine("Napište počet opakování:");
             int x = Convert.ToInt16(Console.ReadLine());
 
