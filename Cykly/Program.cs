@@ -40,13 +40,14 @@ namespace Cykly
                 Console.WriteLine(i);
             }*/
 
-            int pocet = 10;
+            /*int pocet = 10;
             int soucet = 0;
             int max = 0;
 
             for (int i = 0; i < pocet; i++)
             {
                 Console.WriteLine("Zadejte číslo:");
+                /*
                 int cislo = Convert.ToInt32(Console.ReadLine());
                 soucet += cislo;
 
@@ -55,12 +56,90 @@ namespace Cykly
                     max +=1;
                 }
             }
+*/
+            /*
+                        Console.WriteLine("Součet čísel je: " + soucet);
+                        Console.WriteLine("Největší číslo ze všech zadaných čísel je: " + max);
 
 
-            Console.WriteLine("Součet čísel je: " + soucet);
-            Console.WriteLine("Největší číslo ze všech zadaných čísel je: " + max);
 
-            Console.ReadKey();
-        }
+                            Console.WriteLine("Kolikrát?");
+                            int x = Convert.ToInt16(Console.ReadLine());
+                            int i = 0;
+                            do
+                            {
+                                Console.WriteLine(i);
+                                i++;
+                            } while (i < x);
+                            */
+
+            /* Console.WriteLine("Chcete pokračovat? Y/N");
+             int x = Convert.ToInt16(Console.ReadLine());
+             if (x == 'Y')
+             {
+                 do
+                 {
+                     i++;
+                 } while (i < x);
+             }*/
+
+            /*
+            
+            string odpoved;
+            {
+                Console.WriteLine("Chcete pokračovat?");
+                odpoved = Console.ReadLine();
+            } while (odpoved == "ano");
+
+            Console.WriteLine("Děkuji za použití aplikace.");
+            */
+
+            //součet 10 desetinných čísel
+            /*string odpoved;
+            do
+            {
+                float soucet = 0; //Vynulování součtu pro opakování sečtení čísel
+                for (int i = 0; i < 10; i++)
+                {
+                    soucet += float.Parse(Console.ReadLine()); //přičtu číslo k součtu
+                    Console.WriteLine("Součet: " + soucet);
+                    Console.WriteLine("Chcete pokračovat? Y/N");
+                }
+                //do while proběhne jen jednou a poté vyhodnotí
+
+                    odpoved = Console.ReadLine();
+            }while (odpoved == "Y");*/
+
+            //Výběr největšího čísla z 10 čísel
+            string odpoved;
+            do
+            {
+                float cislo = 0;
+                float max = 0;
+                float min = 0;
+                Console.WriteLine("Napište 10 čísel. Program následně vybere nejvetší zadané číslo a vypíše ho: ");
+                for (int i = 0; i < 10; i++)
+                {
+                    cislo = float.Parse(Console.ReadLine());
+                    if (cislo > max)
+                    {
+                        max = cislo;
+                    } 
+                    if (cislo < min)
+                    {
+                        min = cislo;
+                    }
+                }
+                Console.WriteLine("Největší číslo je: " + max);
+                Console.WriteLine("Nejmenší číslo je: " + min);
+                Console.WriteLine("Chcete pokračovat? y/n");
+                odpoved = Console.ReadLine();
+            } while (odpoved == "y");
+
+            Console.WriteLine("Díky.");
+
+        Console.ReadKey();
+            }
+
     }
 }
