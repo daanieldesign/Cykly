@@ -40,14 +40,14 @@ namespace Cykly
                 Console.WriteLine(i);
             }*/
 
-            /*int pocet = 10;
+            /*
+            int pocet = 10;
             int soucet = 0;
             int max = 0;
 
             for (int i = 0; i < pocet; i++)
             {
                 Console.WriteLine("Zadejte číslo:");
-                /*
                 int cislo = Convert.ToInt32(Console.ReadLine());
                 soucet += cislo;
 
@@ -56,90 +56,45 @@ namespace Cykly
                     max +=1;
                 }
             }
-*/
-            /*
-                        Console.WriteLine("Součet čísel je: " + soucet);
-                        Console.WriteLine("Největší číslo ze všech zadaných čísel je: " + max);
 
 
+            Console.WriteLine("Součet čísel je: " + soucet);
+            Console.WriteLine("Největší číslo ze všech zadaných čísel je: " + max);
 
-                            Console.WriteLine("Kolikrát?");
-                            int x = Convert.ToInt16(Console.ReadLine());
-                            int i = 0;
-                            do
-                            {
-                                Console.WriteLine(i);
-                                i++;
-                            } while (i < x);
-                            */
-
-            /* Console.WriteLine("Chcete pokračovat? Y/N");
-             int x = Convert.ToInt16(Console.ReadLine());
-             if (x == 'Y')
-             {
-                 do
-                 {
-                     i++;
-                 } while (i < x);
-             }*/
-
-            /*
-            
-            string odpoved;
-            {
-                Console.WriteLine("Chcete pokračovat?");
-                odpoved = Console.ReadLine();
-            } while (odpoved == "ano");
-
-            Console.WriteLine("Děkuji za použití aplikace.");
             */
 
-            //součet 10 desetinných čísel
-            /*string odpoved;
-            do
+            //Úkol 2 – Program, který napíše počet kladných, záporných čísel a nul
+
+            int nula = 0;
+            int kladne = 0;
+            int zaporne = 0;
+            Console.Write("Vyberte počet čísel, se kterými chcete pracovat: ");
+            int pocet = Convert.ToInt16(Console.ReadLine());
+
+            for (int i = 0; i < pocet; i++)
             {
-                float soucet = 0; //Vynulování součtu pro opakování sečtení čísel
-                for (int i = 0; i < 10; i++)
+                
+                Console.Write("Napište nyní " + pocet + "x číslo, které chcete použít k seřazení: ");
+                float cislo = float.Parse(Console.ReadLine());
+
+                if (cislo == 0)
                 {
-                    soucet += float.Parse(Console.ReadLine()); //přičtu číslo k součtu
-                    Console.WriteLine("Součet: " + soucet);
-                    Console.WriteLine("Chcete pokračovat? Y/N");
+                    nula += 1;
                 }
-                //do while proběhne jen jednou a poté vyhodnotí
-
-                    odpoved = Console.ReadLine();
-            }while (odpoved == "Y");*/
-
-            //Výběr největšího čísla z 10 čísel
-            string odpoved;
-            do
-            {
-                float cislo = 0;
-                float max = 0;
-                float min = 0;
-                Console.WriteLine("Napište 10 čísel. Program následně vybere nejvetší zadané číslo a vypíše ho: ");
-                for (int i = 0; i < 10; i++)
+                else if (cislo > 0) {
+                    kladne += 1;
+                }
+                else if (cislo < 0)
                 {
-                    cislo = float.Parse(Console.ReadLine());
-                    if (cislo > max)
-                    {
-                        max = cislo;
-                    } 
-                    if (cislo < min)
-                    {
-                        min = cislo;
-                    }
+                    zaporne += 1;
                 }
-                Console.WriteLine("Největší číslo je: " + max);
-                Console.WriteLine("Nejmenší číslo je: " + min);
-                Console.WriteLine("Chcete pokračovat? y/n");
-                odpoved = Console.ReadLine();
-            } while (odpoved == "y");
-
-            Console.WriteLine("Díky.");
-
-        Console.ReadKey();
             }
 
+            Console.WriteLine("Počet nul: " + nula);
+            Console.WriteLine("Počet kladných čísel: " + kladne);
+            Console.WriteLine("Počet záporných čísel: " + zaporne);
+            
+            Console.ReadKey();
+        }
     }
 }
